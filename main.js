@@ -34,6 +34,42 @@ $('.close-search-form').on('click', function() {
 $('.cat').each(function() {
 	$(this).css("background", $(this).data('color'));
 })
+// our auto slider code    
+    $(function autoslider() {
+            
+        $('.logo .active').each(function () {
+                
+            if (!$(this).is(':last-Child')) {
+                    
+                $(this).delay(3000).fadeOut(1000, function () {
+                    
+                    $(this).removeClass('active').next().addClass('active').fadeIn();
+                    
+                    autoslider();
+                        
+                });
+                    
+            } else {
+                    
+                
+                $(this).delay(3000).fadeOut(1000, function () {
+                
+                
+                    $(this).removeClass('active');
+                
+                
+                    $('.logo div').eq(0).addClass('active').fadeIn();
+                
+                    autoslider();
+            
+                });
+        
+            }
+    
+        });
+
+    });
+});
+
 
 AOS.init();
-
