@@ -68,8 +68,5 @@ $('.cat').each(function() {
     
         });
 
-    });
-});
-
-
+    });});
 AOS.init();
