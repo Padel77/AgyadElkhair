@@ -34,6 +34,7 @@ $('.close-search-form').on('click', function() {
 $('.cat').each(function() {
 	$(this).css("background", $(this).data('color'));
 })
+AOS.init();
 // our auto slider code    
     $(function autoslider() {
             
@@ -69,4 +70,4 @@ $('.cat').each(function() {
         });
 
     });});
-AOS.init();
+
